@@ -1,0 +1,14 @@
+#header {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#search-field-container {
+    text-align: center;
+
+}
+
+#search-field-container input {
+    font-size: 40px;
+}

@@ -1,4 +1,16 @@
-<h1>World of beers</h1>
+<html>
+<head>
+    <title>World of beers</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<div id="header">World of Beers</div>
+Going somewhere and want to know the most popular local brew?
+World of beers is here for you.
+
+<div id="search-field-container">
+    <label for="search-field">Country</label>
+    <input id="search-field" type="text" placeholder="e.g. Macedonia"/>
+</div>
 
 <div class="country" id="country-macedonia">
     <h2>Macedonia</h2>
@@ -32,3 +44,39 @@
         It has spun off Imperial Light and Imperial Silver.
     </p>
 </div>
+
+<script type="text/javascript">
+
+    // String startswith polyfill
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith
+    if (!String.prototype.startsWith) {
+        Object.defineProperty(String.prototype, 'startsWith', {
+            enumerable: false,
+            configurable: false,
+            writable: false,
+            value: function (searchString, position) {
+                position = position || 0;
+                return this.lastIndexOf(searchString, position) === position;
+            }
+        });
+    }
+
+    var search = document.querySelector("#search-field");
+
+    search.oninput = function (e) {
+        var countries = document.querySelectorAll(".country");
+        for (var i = 0; i < countries.length; i++) {
+            var country_name = countries[i].id.replace("country-", "");
+            if (country_name.startsWith(search.value)) {
+                countries[i].style.display = "block";
+            }
+            else {
+                countries[i].style.display = "none";
+            }
+        }
+    }
+
+</script>
+
+
+</html>
