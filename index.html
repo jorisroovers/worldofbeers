@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>World of beers</title>
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
@@ -12,6 +13,58 @@ World of beers is here for you.
     <input id="search-field" type="text" placeholder="e.g. Macedonia"/>
 </div>
 
+<div class="country" id="country-belgium">
+    <h2>Belgium</h2>
+
+    <h3>Jupiler</h3>
+
+    <p>
+        Jupiler is a Belgian beer brewed by Anheuser–Busch InBev at Piedboeuf Brewery in Jupille-sur-Meuse, Belgium. It
+        is the biggest-selling beer in Belgium.
+    </p>
+
+    <h3>Stella Artois</h3>
+
+    <p>
+        Stella Artois /ˈstɛlə ɑrˈtwɑː/, informally called Stella, is a pilsner beer of between 4.8 and 5.2% ABV. It has
+        been brewed in Leuven, Belgium, since 1926, although it is also brewed in other locations.
+    </p>
+
+    <h3>Maes</h3>
+
+    <p>
+        Maes pils is a brand of Belgian pils brewed by Alken-Maes. The beer finds its origins in the beer produced in
+        1930
+        for Antwerp Universal Exposition called Prima Maezenbier. After Jupiler and Stella Artois, it is the third
+        best-selling pilsner in Belgium.
+    </p>
+</div>
+
+<div class="country" id="country-costarica">
+    <h2>Costa Rica</h2>
+
+    <h3>Imperial</h3>
+
+    <p>
+        Imperial (Cerveza Imperial) is a Costa Rican brand of beer, manufactured by the Florida Ice & Farm Company
+        (FIFCO).
+        Imperial, a lager, was first produced by the Ortega brewery in 1924 and is the most popular beer in Costa
+        Rica.
+        It has spun off Imperial Light and Imperial Silver.
+    </p>
+</div>
+
+<div class="country" id="country-india">
+    <h2>India</h2>
+
+    <h3>Kingfisher</h3>
+
+    <p>
+        Kingfisher is an Indian beer brewed by United Breweries Group, Bangalore. The brand was launched in 1978. With a
+        market share of over 36% in India, it is also available in 52 other countries.
+    </p>
+
+</div>
 <div class="country" id="country-macedonia">
     <h2>Macedonia</h2>
 
@@ -31,18 +84,22 @@ World of beers is here for you.
     <p>TODO</p>
 
 </div>
-<div class="country" id="country-costarica">
-    <h2>Costa Rica</h2>
 
-    <h3>Imperial</h3>
+<div class="country" id="country-netherlands">
+    <h2>Netherlands</h2>
+
+    <h3>Heineken</h3>
 
     <p>
-        Imperial (Cerveza Imperial) is a Costa Rican brand of beer, manufactured by the Florida Ice & Farm Company
-        (FIFCO).
-        Imperial, a lager, was first produced by the Ortega brewery in 1924 and is the most popular beer in Costa
-        Rica.[1]
-        It has spun off Imperial Light and Imperial Silver.
+        Heineken Lager Beer (Dutch: Heineken Pilsener), or simply Heineken (Dutch pronunciation: [ˈɦɛinəkən]), is a pale
+        lager beer with 5% alcohol by volume produced by the Dutch brewing company Heineken International. Heineken is
+        well
+        known for its signature green bottle and red star.
     </p>
+</div>
+
+<div>
+    <a href="https://github.com/jorisroovers/worldofbeers" target="_blank">Fork me on github</a>
 </div>
 
 <script type="text/javascript">
@@ -67,7 +124,7 @@ World of beers is here for you.
         var countries = document.querySelectorAll(".country");
         for (var i = 0; i < countries.length; i++) {
             var country_name = countries[i].id.replace("country-", "");
-            if (country_name.startsWith(search.value)) {
+            if (country_name.startsWith(search.value.toLowerCase())) {
                 countries[i].style.display = "block";
             }
             else {
@@ -77,6 +134,5 @@ World of beers is here for you.
     }
 
 </script>
-
 
 </html>
