@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,46 +14,9 @@
 </a>
 <div id="masthead">
     <div id="masthead-background">
-        <div class="beer-bubble" id="bubble-1"></div>
-        <div class="beer-bubble" id="bubble-2"></div>
-        <div class="beer-bubble" id="bubble-3"></div>
-        <div class="beer-bubble" id="bubble-4"></div>
-        <div class="beer-bubble" id="bubble-5"></div>
-        <div class="beer-bubble" id="bubble-6"></div>
-        <div class="beer-bubble" id="bubble-7"></div>
-        <div class="beer-bubble" id="bubble-8"></div>
-        <div class="beer-bubble" id="bubble-9"></div>
-        <div class="beer-bubble" id="bubble-10"></div>
-        <div class="beer-bubble" id="bubble-11"></div>
-        <div class="beer-bubble" id="bubble-12"></div>
-        <div class="beer-bubble" id="bubble-13"></div>
-        <div class="beer-bubble" id="bubble-14"></div>
-        <div class="beer-bubble" id="bubble-15"></div>
-        <div class="beer-bubble" id="bubble-16"></div>
-        <div class="beer-bubble" id="bubble-17"></div>
-        <div class="beer-bubble" id="bubble-18"></div>
-        <div class="beer-bubble" id="bubble-19"></div>
-        <div class="beer-bubble" id="bubble-20"></div>
-        <div class="beer-bubble" id="bubble-21"></div>
-        <div class="beer-bubble" id="bubble-22"></div>
-        <div class="beer-bubble" id="bubble-23"></div>
-        <div class="beer-bubble" id="bubble-24"></div>
-        <div class="beer-bubble" id="bubble-25"></div>
-        <div class="beer-bubble" id="bubble-26"></div>
-        <div class="beer-bubble" id="bubble-27"></div>
-        <div class="beer-bubble" id="bubble-28"></div>
-        <div class="beer-bubble" id="bubble-29"></div>
-        <div class="beer-bubble" id="bubble-30"></div>
-        <div class="beer-bubble" id="bubble-31"></div>
-        <div class="beer-bubble" id="bubble-32"></div>
-        <div class="beer-bubble" id="bubble-33"></div>
-        <div class="beer-bubble" id="bubble-34"></div>
-        <div class="beer-bubble" id="bubble-35"></div>
-        <div class="beer-bubble" id="bubble-36"></div>
-        <div class="beer-bubble" id="bubble-37"></div>
-        <div class="beer-bubble" id="bubble-38"></div>
-        <div class="beer-bubble" id="bubble-39"></div>
-        <div class="beer-bubble" id="bubble-40"></div>
+        {% for i in (0..40) %}
+            <div id="bubble-{{i}}"></div>
+        {% endfor %}
     </div>
     <div id="title">World of Beers</div>
     <div id="subtitle">Going somewhere? What's the most popular local brew?</div>
@@ -63,85 +28,20 @@
     </div>
 </div>
 <div class="container">
-    <div class="country" id="country-belgium">
-        <h2>Belgium</h2>
-
-        <h3>Jupiler</h3>
-
-        <p>
-            Jupiler is a Belgian beer brewed by Anheuser–Busch InBev at Piedboeuf Brewery in Jupille-sur-Meuse, Belgium. It is the biggest-selling beer in Belgium.
-        </p>
-
-        <h3>Stella Artois</h3>
-
-        <p>
-            Stella Artois /ˈstɛlə ɑrˈtwɑː/, informally called Stella, is a pilsner beer of between 4.8 and 5.2% ABV. It has been brewed in Leuven, Belgium, since 1926, although it is also brewed in other locations.
-        </p>
-
-        <h3>Maes</h3>
-
-        <p>
-            Maes pils is a brand of Belgian pils brewed by Alken-Maes. The beer finds its origins in the beer produced in 1930 for Antwerp Universal Exposition called Prima Maezenbier. After Jupiler and Stella Artois, it is the third best-selling pilsner in Belgium.
-        </p>
+    {% for country in site.countries %}
+    <div class="country" id="country-{{ country.name }}">
+        <h2>{{country.name | capitalize }}</h2>
+        <div class="beer">
+            {% for beer in country.beers %}
+            <h3>{{ beer.name }}</h3>
+            <p>
+                <!--  {{ beer.image }} -->
+                {{ beer.description }}
+            </p>
+            {% endfor %}
+        </div>
     </div>
-
-    <div class="country" id="country-costarica">
-        <h2>Costa Rica</h2>
-
-        <h3>Imperial</h3>
-
-        <p>
-            Imperial (Cerveza Imperial) is a Costa Rican brand of beer, manufactured by the Florida Ice & Farm Company (FIFCO). Imperial, a lager, was first produced by the Ortega brewery in 1924 and is the most popular beer in Costa Rica. It has spun off Imperial Light and Imperial Silver.
-        </p>
-    </div>
-
-    <div class="country" id="country-india">
-        <h2>India</h2>
-
-        <h3>Kingfisher</h3>
-
-        <p>
-            Kingfisher is an Indian beer brewed by United Breweries Group, Bangalore. The brand was launched in 1978. With a market share of over 36% in India, it is also available in 52 other countries.
-        </p>
-
-    </div>
-    <div class="country" id="country-macedonia">
-        <h2>Macedonia</h2>
-
-        <h3>Skopsko</h3>
-
-        <p>
-            Skopsko (Macedonian: Скопско) is the most popular beer in Macedonia. It has 64% of the market in Macedonia. It was the first commercial beer, the best-known and best-selling beer brand in the country. Once a "Best of Macedonia" has become "Our Best" and "Skopsko, and everything is possible" - are its most famous slogans.
-        </p>
-
-        <h3>Zlaten Dab</h3>
-
-        <p>TODO</p>
-
-    </div>
-
-    <div class="country" id="country-netherlands">
-        <h2>Netherlands</h2>
-
-        <h3>Heineken</h3>
-
-        <p>
-            Heineken Lager Beer (Dutch: Heineken Pilsener), or simply Heineken (Dutch pronunciation: [ˈɦɛinəkən]), is a pale lager beer with 5% alcohol by volume produced by the Dutch brewing company Heineken International. Heineken is well known for its signature green bottle and red star.
-        </p>
-    </div>
-
-    <div class="country" id="country-portugal">
-        <h2>Portugal</h2>
-        <h3>Super Bock</h3>
-        <p>
-            Super Bock is a Portuguese brand of strong pale lager (bock) from the Unicer brewery which produces a range of beers under the same name. Established in 1927, Unicer is based in Leça do Balio, just outside the city of Porto, Portugal. Super Bock is the most popular beer in Portugal (42% market share, September 1998), especially in the north of the country, and competes well against Sagres and Coral (Madeira) in the rest of Portugal
-        </p>
-        <h3>Sagres</h3>
-        <p>
-            Sagres (5,0% abv) is a pale lager (branca) made of 100% natural product, brewed according to exclusive traditional methods with water, malt, cereals which have not been malted and a rigorous selection of the finest hops. No additives or preservatives are used in its brewing. Moderately rich, it has a dry and pleasantly bitter taste. It is light and has a golden colour. Sagres was the first Portuguese brand to launch the Mini version (20cl), a success among consumers because of it small size and constant freshness.
-        </p>
-    </div>
-
+    {% endfor %}
 
 </div>
 <script type="text/javascript" src="js/app.js"></script>
