@@ -65,6 +65,13 @@
     100% { bottom: 100%; }
 }
 
+// We need the webkit specific directives for safari.
+// This also needs to be a on seperate line from the @keyframes directive above.
+@-webkit-keyframes bubble-up {
+    0% { bottom: -20px; }
+    50% { bottom: 100%; }
+    100% { bottom: 100%; }   
+}
 
 // Beer has bubbles, let's add some :)
 
@@ -77,6 +84,11 @@
     border: 2px solid white;
     position: absolute;
     bottom: -$size;
+    // We need the webkit specific directives for safari
+    -webkit-animation-name: bubble-up;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-delay: $delay;
+    -webkit-animation-iteration-count: infinite;
     animation: bubble-up;
     animation-duration: 8s;
     animation-delay: $delay;
