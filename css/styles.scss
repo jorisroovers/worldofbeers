@@ -1,0 +1,132 @@
+---
+---
+
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+#masthead {
+    text-align: center;
+    color: white;
+    padding: 50px 0;
+    position: relative;
+}
+
+#masthead-background {
+    position: absolute;
+    top:0;
+    z-index:-1;
+    width: 100%;
+    height: 100%;
+    background: #ffce00; 
+}
+
+#title {
+    font-size: 72px;
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+    line-height: 150px;
+    color: #a2640f;
+    text-shadow: 2px 2px #f5f5f5;
+}
+
+#subtitle {
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+}
+
+#start-here {
+    position: absolute;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    top: 30px;
+    left: -70px;
+}
+
+#start-here-arrow {
+    vertical-align: top;
+}
+
+#search-field-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    color: #a2640f;
+}
+
+#search-field-container input {
+    margin: 20px 0 0 20px;
+    font-size: 40px;
+    z-index: 2;
+}
+
+@keyframes bubble-up {
+    0% { bottom: -20px; }
+    50% { bottom: 100%; }
+    100% { bottom: 100%; }
+}
+
+
+// Beer has bubbles, let's add some :)
+
+@mixin beer-bubble($size, $left, $delay:2s) {
+    width: $size;
+    height: $size;
+    left: $left;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.60);
+    border: 2px solid white;
+    position: absolute;
+    bottom: -$size;
+    animation: bubble-up;
+    animation-duration: 8s;
+    animation-delay: $delay;
+    animation-iteration-count: infinite;
+    z-index: -1;
+}
+
+#bubble-1 { @include beer-bubble(17px, 10%, 3s); }
+#bubble-2 { @include beer-bubble(15px, 17%, 1s); }
+#bubble-3 { @include beer-bubble(10px, 42%, 0s); }
+#bubble-4 { @include beer-bubble(10px, 45%, 0.2s); }
+#bubble-5 { @include beer-bubble(12px, 47%, 0.5s); }
+#bubble-6 { @include beer-bubble(10px, 57%, 2.3s); }
+#bubble-7 { @include beer-bubble(10px, 59%, 2.5s); }
+#bubble-8 { @include beer-bubble(8px, 72%, 5s); }
+#bubble-9 { @include beer-bubble(13px, 78%, 5.1s); }
+#bubble-10 { @include beer-bubble(10px, 42%); }
+#bubble-11 { @include beer-bubble(8px, 5%, 3.1s); }
+#bubble-12 { @include beer-bubble(9px, 7%, 3.2s); }
+#bubble-13 { @include beer-bubble(14px, 90%, 1.3s); }
+#bubble-14 { @include beer-bubble(10px, 32%, 1.3s); }
+#bubble-15 { @include beer-bubble(11px, 95%, 1.5s); }
+#bubble-16 { @include beer-bubble(10px, 23%, 5.7s); }
+#bubble-17 { @include beer-bubble(11px, 51%, 6.4s); }
+#bubble-18 { @include beer-bubble(12px, 83%, 5.2s); }
+#bubble-19 { @include beer-bubble(10px, 31%, 6.2); }
+#bubble-20 { @include beer-bubble(14px, 74%, 6.7); }
+#bubble-21 { @include beer-bubble(11px, 26%, 3.4s); }
+#bubble-22 { @include beer-bubble(12px, 83%, 3.2s); }
+#bubble-23 { @include beer-bubble(10px, 31%, 3.2); }
+#bubble-24 { @include beer-bubble(14px, 23%, 5.0); }
+#bubble-25 { @include beer-bubble(11px, 41%, 3.4s); }
+#bubble-26 { @include beer-bubble(12px, 83%, 4.2s); }
+#bubble-27 { @include beer-bubble(9px, 31%, 2.0s); }
+#bubble-28 { @include beer-bubble(14px, 74%, 3.7); }
+#bubble-29 { @include beer-bubble(11px, 39%, 4.4s); }
+#bubble-30 { @include beer-bubble(12px, 11%, 7.2s); }
+#bubble-31 { @include beer-bubble(12px, 12%, 1.2s); }
+#bubble-32 { @include beer-bubble(8px, 14%, 1.3s); }
+#bubble-33 { @include beer-bubble(10px, 21%, 2.2s); }
+#bubble-34 { @include beer-bubble(9px, 33%, 2.2s); }
+#bubble-35 { @include beer-bubble(12px, 88%, 7.2s); }
+#bubble-36 { @include beer-bubble(11px, 11%, 7.2s); }
+#bubble-38 { @include beer-bubble(8px, 43%, 6.9s); }
+#bubble-39 { @include beer-bubble(14px, 5%, 7.7s); }
+#bubble-40 { @include beer-bubble(10px, 65%, 6.8s); }
+
+
+// General styles
+
+h2 {
+    font-family: 'Bree Serif', serif;
+}
