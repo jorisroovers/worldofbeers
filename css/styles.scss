@@ -1,8 +1,11 @@
 ---
 ---
-
 @import url(http://fonts.googleapis.com/css?family=Bree+Serif);
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+//////////////////////////////////////////////
+// Masthead                                 //
+//////////////////////////////////////////////
 
 #masthead {
     text-align: center;
@@ -15,7 +18,7 @@
 #masthead-background {
     position: absolute;
     top:0;
-    z-index:-1;
+    z-index: -1;
     width: 100%;
     height: 100%;
     background: #ffce00; 
@@ -57,8 +60,11 @@
 #search-field-container input {
     margin: 20px 0 0 20px;
     font-size: 40px;
-    z-index: 2;
 }
+
+//////////////////////////////////////////////
+// Beer has bubbles, let's add some :)      //
+//////////////////////////////////////////////
 
 @keyframes bubble-up {
     0% { bottom: -20px; }
@@ -74,7 +80,6 @@
     100% { bottom: 100%; }   
 }
 
-// Beer has bubbles, let's add some :)
 
 @mixin beer-bubble($size, $left, $delay:2s) {
     width: $size;
@@ -94,7 +99,6 @@
     animation-duration: 8s;
     animation-delay: $delay;
     animation-iteration-count: infinite;
-    z-index: -1;
 }
 
 #bubble-1 { @include beer-bubble(17px, 10%, 3s); }
@@ -138,14 +142,14 @@
 #bubble-40 { @include beer-bubble(10px, 65%, 6.8s); }
 
 
-// General styles
+//////////////////////////////////////////////
+// Country styling                          //
+//////////////////////////////////////////////
 
-h2 {
-    font-family: 'Bree Serif', serif;
-}
 
 .country {
     h1 { 
+        font-family: 'Bree Serif', serif;
         display:inline;
         font-size: 36px;
     }
@@ -159,9 +163,23 @@ h2 {
         height: 30px; 
         vertical-align: bottom;
     }
+    
+    .beer {
+        padding-left: 100px;
+        font-size: 16px;
+    }
 }
 
-.beer {
-    padding-left: 100px;
-    font-size: 16px;
+#no-results {
+    display: none;
+    text-align: center;
+    font-size: 36px;
+    padding: 30px 0;
+    #sorry {
+        font-family: 'Bree Serif', serif;
+        padding: 30px 0;
+    }
+    #help-us {
+        font-size: 20px;   
+    }
 }

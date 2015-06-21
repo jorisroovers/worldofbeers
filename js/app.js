@@ -13,15 +13,25 @@ if (!String.prototype.startsWith) {
 }
 
 var search = document.querySelector("#search-field");
+var countries = document.querySelectorAll(".country");
+var noresults = document.querySelector("#no-results");
+var noresultsKeyword = document.querySelector("#keyword");
 
 search.oninput = function (e) {
-    var countries = document.querySelectorAll(".country");
+
+    var countryFound = false;
     for (var i = 0; i < countries.length; i++) {
         var country_name = countries[i].id.replace("country-", "");
         if (country_name.startsWith(search.value.toLowerCase())) {
             countries[i].style.display = "block";
+            noresults.style.display = "none";
+            countryFound = true;
         } else {
             countries[i].style.display = "none";
         }
+    }
+    if (!countryFound) {
+        noresults.style.display = "block";
+        noresultsKeyword.innerHTML = search.value;
     }
 }
