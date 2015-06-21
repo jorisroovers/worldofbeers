@@ -1,14 +1,45 @@
-#header {
-    font-size: 30px;
-    font-weight: bold;
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+#masthead {
+    background: #ffce00;
     text-align: center;
+    color: white;
+    padding: 50px 0;
+}
+
+#title {
+    font-size: 72px;
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+    line-height: 150px;
+    color: #a2640f;
+}
+
+#subtitle {
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+}
+
+#start-here {
+    position: absolute;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    top: 30px;
+    left: -70px;
+}
+
+#start-here-arrow {
+    vertical-align: top;
 }
 
 #search-field-container {
+    position: relative;
+    display: inline-block;
     text-align: center;
-
+    color: #a2640f;
 }
 
 #search-field-container input {
+    margin: 20px 0 0 20px;
     font-size: 40px;
 }

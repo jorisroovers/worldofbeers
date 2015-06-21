@@ -1,138 +1,107 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>World of beers</title>
-    <link rel="stylesheet" href="css/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
 </head>
-<div id="header">World of Beers</div>
-Going somewhere and want to know the most popular local brew?
-World of beers is here for you.
+<a href="https://github.com/jorisroovers/worldofbeers"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
+</a>
+<div id="masthead">
+    <div id="title">World of Beers</div>
+    <div id="subtitle">Going somewhere? What's the most popular local brew?</div>
 
-<div id="search-field-container">
-    <label for="search-field">Country</label>
-    <input id="search-field" type="text" placeholder="e.g. Macedonia"/>
+    <div id="search-field-container">
+        <span id="start-here">Start here</span>
+        <img id="start-here-arrow" src="img/start-here-arrow.png" />
+        <input id="search-field" type="text" placeholder="e.g. Macedonia" />
+    </div>
 </div>
+<div class="container">
+    <div class="country" id="country-belgium">
+        <h2>Belgium</h2>
 
-<div class="country" id="country-belgium">
-    <h2>Belgium</h2>
+        <h3>Jupiler</h3>
 
-    <h3>Jupiler</h3>
+        <p>
+            Jupiler is a Belgian beer brewed by Anheuser–Busch InBev at Piedboeuf Brewery in Jupille-sur-Meuse, Belgium. It is the biggest-selling beer in Belgium.
+        </p>
 
-    <p>
-        Jupiler is a Belgian beer brewed by Anheuser–Busch InBev at Piedboeuf Brewery in Jupille-sur-Meuse, Belgium. It
-        is the biggest-selling beer in Belgium.
-    </p>
+        <h3>Stella Artois</h3>
 
-    <h3>Stella Artois</h3>
+        <p>
+            Stella Artois /ˈstɛlə ɑrˈtwɑː/, informally called Stella, is a pilsner beer of between 4.8 and 5.2% ABV. It has been brewed in Leuven, Belgium, since 1926, although it is also brewed in other locations.
+        </p>
 
-    <p>
-        Stella Artois /ˈstɛlə ɑrˈtwɑː/, informally called Stella, is a pilsner beer of between 4.8 and 5.2% ABV. It has
-        been brewed in Leuven, Belgium, since 1926, although it is also brewed in other locations.
-    </p>
+        <h3>Maes</h3>
 
-    <h3>Maes</h3>
+        <p>
+            Maes pils is a brand of Belgian pils brewed by Alken-Maes. The beer finds its origins in the beer produced in 1930 for Antwerp Universal Exposition called Prima Maezenbier. After Jupiler and Stella Artois, it is the third best-selling pilsner in Belgium.
+        </p>
+    </div>
 
-    <p>
-        Maes pils is a brand of Belgian pils brewed by Alken-Maes. The beer finds its origins in the beer produced in
-        1930
-        for Antwerp Universal Exposition called Prima Maezenbier. After Jupiler and Stella Artois, it is the third
-        best-selling pilsner in Belgium.
-    </p>
+    <div class="country" id="country-costarica">
+        <h2>Costa Rica</h2>
+
+        <h3>Imperial</h3>
+
+        <p>
+            Imperial (Cerveza Imperial) is a Costa Rican brand of beer, manufactured by the Florida Ice & Farm Company (FIFCO). Imperial, a lager, was first produced by the Ortega brewery in 1924 and is the most popular beer in Costa Rica. It has spun off Imperial Light and Imperial Silver.
+        </p>
+    </div>
+
+    <div class="country" id="country-india">
+        <h2>India</h2>
+
+        <h3>Kingfisher</h3>
+
+        <p>
+            Kingfisher is an Indian beer brewed by United Breweries Group, Bangalore. The brand was launched in 1978. With a market share of over 36% in India, it is also available in 52 other countries.
+        </p>
+
+    </div>
+    <div class="country" id="country-macedonia">
+        <h2>Macedonia</h2>
+
+        <h3>Skopsko</h3>
+
+        <p>
+            Skopsko (Macedonian: Скопско) is the most popular beer in Macedonia. It has 64% of the market in Macedonia. It was the first commercial beer, the best-known and best-selling beer brand in the country. Once a "Best of Macedonia" has become "Our Best" and "Skopsko, and everything is possible" - are its most famous slogans.
+        </p>
+
+        <h3>Zlaten Dab</h3>
+
+        <p>TODO</p>
+
+    </div>
+
+    <div class="country" id="country-netherlands">
+        <h2>Netherlands</h2>
+
+        <h3>Heineken</h3>
+
+        <p>
+            Heineken Lager Beer (Dutch: Heineken Pilsener), or simply Heineken (Dutch pronunciation: [ˈɦɛinəkən]), is a pale lager beer with 5% alcohol by volume produced by the Dutch brewing company Heineken International. Heineken is well known for its signature green bottle and red star.
+        </p>
+    </div>
+
+    <div class="country" id="country-portugal">
+        <h2>Portugal</h2>
+        <h3>Super Bock</h3>
+        <p>
+            Super Bock is a Portuguese brand of strong pale lager (bock) from the Unicer brewery which produces a range of beers under the same name. Established in 1927, Unicer is based in Leça do Balio, just outside the city of Porto, Portugal. Super Bock is the most popular beer in Portugal (42% market share, September 1998), especially in the north of the country, and competes well against Sagres and Coral (Madeira) in the rest of Portugal
+        </p>
+        <h3>Sagres</h3>
+        <p>
+            Sagres (5,0% abv) is a pale lager (branca) made of 100% natural product, brewed according to exclusive traditional methods with water, malt, cereals which have not been malted and a rigorous selection of the finest hops. No additives or preservatives are used in its brewing. Moderately rich, it has a dry and pleasantly bitter taste. It is light and has a golden colour. Sagres was the first Portuguese brand to launch the Mini version (20cl), a success among consumers because of it small size and constant freshness.
+        </p>
+    </div>
+
+
 </div>
-
-<div class="country" id="country-costarica">
-    <h2>Costa Rica</h2>
-
-    <h3>Imperial</h3>
-
-    <p>
-        Imperial (Cerveza Imperial) is a Costa Rican brand of beer, manufactured by the Florida Ice & Farm Company
-        (FIFCO).
-        Imperial, a lager, was first produced by the Ortega brewery in 1924 and is the most popular beer in Costa
-        Rica.
-        It has spun off Imperial Light and Imperial Silver.
-    </p>
-</div>
-
-<div class="country" id="country-india">
-    <h2>India</h2>
-
-    <h3>Kingfisher</h3>
-
-    <p>
-        Kingfisher is an Indian beer brewed by United Breweries Group, Bangalore. The brand was launched in 1978. With a
-        market share of over 36% in India, it is also available in 52 other countries.
-    </p>
-
-</div>
-<div class="country" id="country-macedonia">
-    <h2>Macedonia</h2>
-
-    <h3>Skopsko</h3>
-
-    <p>
-        Skopsko (Macedonian: Скопско) is the most popular beer in Macedonia.
-        It has 64% of the market in Macedonia. It was the first commercial beer, the best-known and best-selling beer
-        brand
-        in the country.
-        Once a "Best of Macedonia" has become "Our Best" and "Skopsko, and everything is possible" - are its most famous
-        slogans.
-    </p>
-
-    <h3>Zlaten Dab</h3>
-
-    <p>TODO</p>
-
-</div>
-
-<div class="country" id="country-netherlands">
-    <h2>Netherlands</h2>
-
-    <h3>Heineken</h3>
-
-    <p>
-        Heineken Lager Beer (Dutch: Heineken Pilsener), or simply Heineken (Dutch pronunciation: [ˈɦɛinəkən]), is a pale
-        lager beer with 5% alcohol by volume produced by the Dutch brewing company Heineken International. Heineken is
-        well
-        known for its signature green bottle and red star.
-    </p>
-</div>
-
-<div>
-    <a href="https://github.com/jorisroovers/worldofbeers" target="_blank">Fork me on github</a>
-</div>
-
-<script type="text/javascript">
-
-    // String startswith polyfill
-    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith
-    if (!String.prototype.startsWith) {
-        Object.defineProperty(String.prototype, 'startsWith', {
-            enumerable: false,
-            configurable: false,
-            writable: false,
-            value: function (searchString, position) {
-                position = position || 0;
-                return this.lastIndexOf(searchString, position) === position;
-            }
-        });
-    }
-
-    var search = document.querySelector("#search-field");
-
-    search.oninput = function (e) {
-        var countries = document.querySelectorAll(".country");
-        for (var i = 0; i < countries.length; i++) {
-            var country_name = countries[i].id.replace("country-", "");
-            if (country_name.startsWith(search.value.toLowerCase())) {
-                countries[i].style.display = "block";
-            }
-            else {
-                countries[i].style.display = "none";
-            }
-        }
-    }
-
-</script>
+<script type="text/javascript" src="js/app.js"></script>
 
 </html>
