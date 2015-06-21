@@ -15,7 +15,7 @@
 <div id="masthead">
     <div id="masthead-background">
         {% for i in (0..40) %}
-            <div id="bubble-{{i}}"></div>
+        <div id="bubble-{{i}}"></div>
         {% endfor %}
     </div>
     <div id="title">World of Beers</div>
@@ -29,8 +29,13 @@
 </div>
 <div class="container">
     {% for country in site.countries %}
-    <div class="country" id="country-{{ country.name }}">
-        <h2>{{country.name | capitalize }}</h2>
+    <div class="country" id="country-{{ country.name | downcase }}">
+        <div class="header">
+            <div class="flag-container">
+                <img class="flag" src="img/flags/{{country.name | replace:" ","_" }}.png" />
+            </div>
+            <h1>{{ country.name }}</h1>
+        </div>
         <div class="beer">
             {% for beer in country.beers %}
             <h3>{{ beer.name }}</h3>

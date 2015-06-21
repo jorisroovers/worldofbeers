@@ -9,6 +9,7 @@
     color: white;
     padding: 50px 0;
     position: relative;
+    margin-bottom: 20px;
 }
 
 #masthead-background {
@@ -143,7 +144,24 @@ h2 {
     font-family: 'Bree Serif', serif;
 }
 
+.country {
+    h1 { 
+        display:inline;
+        font-size: 36px;
+    }
+    .flag-container {
+        width: 60px;
+        display: inline-block;
+        text-align: right;
+        margin-right: 10px;
+    }
+    .flag { 
+        height: 30px; 
+        vertical-align: bottom;
+    }
+}
+
 .beer {
-    padding-left: 30px;   
+    padding-left: 100px;
     font-size: 16px;
 }

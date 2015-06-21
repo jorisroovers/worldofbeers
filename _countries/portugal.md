@@ -1,5 +1,5 @@
 ---
-name: portugal
+name: Portugal
 beers:
     - name: "Super Bock"
       description: " Super Bock is a Portuguese brand of strong pale lager (bock) from the Unicer brewery which produces a range of beers under the same name. Established in 1927, Unicer is based in Leça do Balio, just outside the city of Porto, Portugal. Super Bock is the most popular beer in Portugal (42% market share, September 1998), especially in the north of the country, and competes well against Sagres and Coral (Madeira) in the rest of Portugal"
