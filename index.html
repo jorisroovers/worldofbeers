@@ -8,6 +8,7 @@
     <title>World of beers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
 </head>
 <a href="https://github.com/jorisroovers/worldofbeers" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
@@ -24,27 +25,31 @@
     <div id="search-field-container">
         <span id="start-here">Start here</span>
         <img id="start-here-arrow" src="img/start-here-arrow.png" />
-        <input id="search-field" type="text" placeholder="e.g. Macedonia" />
+        <input id="search-field" type="text" placeholder="try: Macedonia" />
     </div>
 </div>
 <div class="container">
     <div id="no-results">
         <div id="sorry">Sorry :-( Couldn't find '<span id="keyword"></span>'.</div>
-        <div id="help-us">We currently don't have information on all countries yet.
-            We'd love for you to help us out by contributing on <a href="https://github.com/jorisroovers/worldofbeers" target="_blank">Github</a>.</div>
+        <div id="help-us">We currently don't have information on all countries yet. We'd love for you to help us out by contributing on <a href="https://github.com/jorisroovers/worldofbeers" target="_blank">Github</a>.</div>
     </div>
-    
+
     {% for country in site.countries %}
     <div class="country" id="country-{{ country.name | downcase }}">
         <div class="header">
             <div class="flag-container">
-                <img class="flag" src="img/flags/{{country.name | replace:" ","_" }}.png" />
+                <img class="flag" src="img/flags/{{ country.name | replace:" ","_" }}.png" />
             </div>
             <h1>{{ country.name }}</h1>
         </div>
         <div class="beer">
             {% for beer in country.beers %}
-            <h3>{{ beer.name }}</h3>
+            <div class="header">
+                <h2>{{ beer.name }}</h2>
+                {% if beer.homepage %}
+                <a href="{{ beer.homepage }}" target="_blank"><i class="fa fa-home fa-2x"></i></a>
+                {% endif %}
+            </div>
             <p>
                 <!--  {{ beer.image }} -->
                 {{ beer.description }}
@@ -54,6 +59,15 @@
     </div>
     {% endfor %}
 
+</div>
+<div id="footer">
+    <div class="attribution">
+        Flag images from <a href="http://www.free-country-flags.com" target="_blank">free-country-flags.com</a>, licensed under
+        <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank">CC BY-SA 3.0</a>.
+    </div>
+    <div class="attribution">
+        Font Awesome by Dave Gandy - <a href="http://fontawesome.io" target="_blank">fontawesome.io</a>
+    </div>
 </div>
 <script type="text/javascript" src="js/app.js"></script>
 

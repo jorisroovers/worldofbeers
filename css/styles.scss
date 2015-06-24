@@ -141,6 +141,14 @@
 #bubble-39 { @include beer-bubble(14px, 5%, 7.7s); }
 #bubble-40 { @include beer-bubble(10px, 65%, 6.8s); }
 
+//////////////////////////////////////////////
+// Footer                                   //
+//////////////////////////////////////////////
+#footer {
+    text-align: center;
+    padding: 30px;
+}
+
 
 //////////////////////////////////////////////
 // Country styling                          //
@@ -165,8 +173,24 @@
     }
     
     .beer {
+        .header {
+            margin: 20px 0 10px 0;
+            .fa { float: right; }
+            h2 { 
+                display: inline;
+                font-size: 24px;
+            }
+            a { 
+                color: #a2640f;
+                &:hover {
+                    color: #ffce00;
+                }
+            }
+            
+        }
         padding-left: 100px;
         font-size: 16px;
+            
     }
 }
 
