@@ -4,8 +4,19 @@ Visit the site at [http://jorisroovers.github.io/worldofbeers](http://jorisroove
 
 Flag images from [http://www.free-country-flags.com](http://www.free-country-flags.com), licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0).
 
-## Getting Started ##
+## Development ##
+World of Beers is build using [jekyll](https://jekyllrb.com/) and uses [bundler](http://bundler.io/) for dependency management.
 
-```bundle install``` to install dependencies
+To get started with development:
+```bash
+# install dependencies
+bundle install 
+# serve pages
+bundle exec jekyll serve
+```
 
-```bundle exec jekyll serve``` to serve pages
+## Wishlist ##
+- Social Media share buttons (site in general, per country/beer)
+- Deep-linking into page (e.g. link search results)
+- More countries!
+- World Map? http://www.amcharts.com/svg-maps/?map=world
