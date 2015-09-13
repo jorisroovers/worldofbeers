@@ -175,7 +175,11 @@
     .beer {
         .header {
             margin: 20px 0 10px 0;
-            .fa { float: right; }
+            .fa { 
+                float: right; 
+                line-height: 27px !important; 
+                margin-left: 5px;
+            }
             h2 { 
                 display: inline;
                 font-size: 24px;
@@ -188,6 +192,11 @@
             }
             
         }
+
+        .missing-description {
+            font-style: italic;
+        }
+
         padding-left: 100px;
         font-size: 16px;
             

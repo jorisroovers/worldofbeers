@@ -8,7 +8,7 @@
     <title>World of beers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
 </head>
 <a href="https://github.com/jorisroovers/worldofbeers" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
@@ -45,14 +45,23 @@
         <div class="beer">
             {% for beer in country.beers %}
             <div class="header">
+                <a name="{{ country.name | replace:" ","_" }}_{{beer.name | replace:" ","_" }}"></a>
                 <h2>{{ beer.name }}</h2>
                 {% if beer.homepage %}
                 <a href="{{ beer.homepage }}" target="_blank"><i class="fa fa-home fa-2x"></i></a>
                 {% endif %}
+                {% if beer.wiki %}    
+                <a href="{{ beer.wiki }}" target="_blank"><i class="fa fa-wikipedia-w fa-lg"></i></a>
+                {% endif %}
+                <a href="#{{ country.name | replace:" ","_" }}_{{beer.name | replace:" ","_" }}"><i class="fa fa-link fa-lg"></i></a>
             </div>
             <p>
                 <!--  {{ beer.image }} -->
+                {% if beer.description %}
                 {{ beer.description }}
+                {% else %}
+                <div class="missing-description">It seems like we don't have a description on {{ beer.name }} yet. We'd love for you to help us out by adding one on <a href="https://github.com/jorisroovers/worldofbeers" target="_blank">Github</a>.</div>
+                {% endif %}             
             </p>
             {% endfor %}
         </div>
